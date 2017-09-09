@@ -17,7 +17,7 @@
 			<form role="form">
 <h1>Welcome to Student Management System!</h1>
 
-<table border="1">
+<table class="table table-hover table-bordered">
 	<thead>
 		<tr>
 			<th>ID NO.</th>
@@ -40,9 +40,9 @@
 							<td>'.$s['course'].'</td>
 							<td>'.$s['sex'].'</td>
 							<td>
-								<a href="">View</a>|
-								<a href="">Edit</a>|
-								<a href="">Delete</a>|
+								<a href="'.base_url('student/profile'.$s['idno']).'">View </a>|
+								<a href="">Edit </a>|
+								<a href="">Delete </a>
 							</td>
 						</tr>';						
 			}
@@ -57,7 +57,7 @@
 	
 	<div class="row">
 		<div class="col-md-12 text-center footer">
-			Copyright &copy; 2017. Star na si Van Damme Stallone
+			Copyright &copy; 2017. Student Management System
 		</div>
 	</div>
 	

@@ -15,8 +15,8 @@
 		<div class="col-md-8 col-xs-8 col-sm-8 content">
 			<form role="form">
 			
-				<div class="form-group">
-					<a href="../CI">View Students</a>
+				<div class="form-group"  method="POST">
+					<a href="../CI"><h1>View Students</h1></a>
 				<div class="form-group">
 					<label for="idno">ID No.:</label>
 					<input type="text" class="form-control" id="idno" name="idno">
@@ -39,7 +39,9 @@
 			
 				<div class="form-group">
 					<label for="course">Course:</label>
-					<input type="text" class="form-control" id="course" name="course">
+					<select class="form-control" id="course" name="course">
+						<option value="BSIT">BSIT</option>
+					</select>
 				</div>
 			
 			
@@ -52,7 +54,7 @@
 				
 				<div class="form-group">
 					<button type="submit" class="btn btn-primary">
-					Save <span class="glyphicon glyphicon-save">
+					Save <span class="glyphicon glyphicon-floppy-save">
 				</div>
 			
 			</form>
@@ -62,11 +64,21 @@
 	
 	<div class="row">
 		<div class="col-md-12 text-center footer">
-			Copyright &copy; 2017. Star na si Van Damme Stallone
+			Copyright &copy; 2017. Student Management System
 		</div>
 
 </div>
 
+<?php
+if( isset($saved) && $saved==TRUE ){
+?>
+<script type="text/javascript">
+	alert("The new student record was successfully saved!");
+	location.href = '<?php echo base_url('boots'); ?>';
+</script>
+<?php
+}
 
+?>
 
 
